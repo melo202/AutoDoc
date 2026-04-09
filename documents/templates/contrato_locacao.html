@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 2.5cm;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.8;
+            color: #000;
+            text-align: justify;
+        }
+        h1 {
+            text-align: center;
+            font-size: 16pt;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 13pt;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .signature-block {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .signature {
+            text-align: center;
+            width: 45%;
+        }
+        .signature-line {
+            border-top: 1px solid #000;
+            margin-top: 60px;
+            padding-top: 5px;
+        }
+        .witness-block {
+            margin-top: 60px;
+        }
+        .date-location {
+            text-align: right;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contrato de Locação de Imóvel</h1>
+
+    <p>Pelo presente instrumento particular de contrato de locação, as partes abaixo qualificadas:</p>
+
+    <h2>Cláusula 1ª - Das Partes</h2>
+
+    <p><strong>LOCADOR(A):</strong> {{ locador_nome }}, inscrito(a) no CPF sob o nº {{ locador_cpf }},
+    portador(a) do RG nº {{ locador_rg }}, residente e domiciliado(a) em {{ locador_endereco }},
+    doravante denominado(a) simplesmente LOCADOR(A).</p>
+
+    <p><strong>LOCATÁRIO(A):</strong> {{ locatario_nome }}, inscrito(a) no CPF sob o nº {{ locatario_cpf }},
+    portador(a) do RG nº {{ locatario_rg }}, residente e domiciliado(a) em {{ locatario_endereco }},
+    doravante denominado(a) simplesmente LOCATÁRIO(A).</p>
+
+    <h2>Cláusula 2ª - Do Objeto</h2>
+
+    <p>O presente contrato tem como objeto a locação do imóvel situado em {{ imovel_endereco }},
+    descrito como: {{ imovel_descricao }}.</p>
+
+    <h2>Cláusula 3ª - Do Valor e Pagamento</h2>
+
+    <p>O valor mensal do aluguel é de {{ valor_aluguel }}, a ser pago até o dia {{ dia_vencimento }}
+    de cada mês, mediante depósito bancário ou transferência na conta indicada pelo(a) LOCADOR(A).</p>
+
+    <p><strong>Parágrafo Único:</strong> O atraso no pagamento do aluguel acarretará multa de 2% (dois por cento)
+    sobre o valor devido, acrescido de juros de 1% (um por cento) ao mês.</p>
+
+    <h2>Cláusula 4ª - Do Prazo</h2>
+
+    <p>O prazo de locação é de {{ prazo }}, com início na data de assinatura deste contrato.</p>
+
+    <h2>Cláusula 5ª - Da Caução</h2>
+
+    <p>A título de garantia, o(a) LOCATÁRIO(A) depositará o valor de {{ valor_caucao }} como caução,
+    a ser devolvido ao final da locação, após vistoria do imóvel.</p>
+
+    <h2>Cláusula 6ª - Das Obrigações do Locatário</h2>
+
+    <p>O(A) LOCATÁRIO(A) se obriga a:</p>
+    <p>a) Pagar pontualmente o aluguel e encargos;</p>
+    <p>b) Manter o imóvel em bom estado de conservação;</p>
+    <p>c) Não sublocar ou ceder o imóvel sem autorização por escrito do(a) LOCADOR(A);</p>
+    <p>d) Restituir o imóvel, ao final da locação, nas mesmas condições em que o recebeu;</p>
+    <p>e) Pagar as despesas ordinárias de condomínio, água, luz e gás.</p>
+
+    <h2>Cláusula 7ª - Das Obrigações do Locador</h2>
+
+    <p>O(A) LOCADOR(A) se obriga a:</p>
+    <p>a) Entregar o imóvel em condições de uso;</p>
+    <p>b) Garantir o uso pacífico do imóvel;</p>
+    <p>c) Arcar com as despesas extraordinárias de condomínio.</p>
+
+    <h2>Cláusula 8ª - Da Rescisão</h2>
+
+    <p>A rescisão antecipada por parte do(a) LOCATÁRIO(A) implicará no pagamento de multa equivalente
+    a 3 (três) meses de aluguel, proporcional ao período restante do contrato.</p>
+
+    <h2>Cláusula 9ª - Do Foro</h2>
+
+    <p>As partes elegem o foro da comarca de {{ cidade_assinatura }} para dirimir quaisquer dúvidas
+    oriundas do presente contrato.</p>
+
+    <p class="date-location">{{ cidade_assinatura }}, {{ data_atual }}.</p>
+
+    <div class="signature-block">
+        <div class="signature">
+            <div class="signature-line">
+                {{ locador_nome }}<br>
+                <small>LOCADOR(A)</small>
+            </div>
+        </div>
+        <div class="signature">
+            <div class="signature-line">
+                {{ locatario_nome }}<br>
+                <small>LOCATÁRIO(A)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="witness-block">
+        <p><strong>Testemunhas:</strong></p>
+        <div class="signature-block">
+            <div class="signature">
+                <div class="signature-line">
+                    Nome:<br>CPF:
+                </div>
+            </div>
+            <div class="signature">
+                <div class="signature-line">
+                    Nome:<br>CPF:
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

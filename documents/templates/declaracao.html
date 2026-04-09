@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 2.5cm;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.8;
+            color: #000;
+            text-align: justify;
+        }
+        h1 {
+            text-align: center;
+            font-size: 18pt;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+        }
+        .signature-block {
+            margin-top: 80px;
+            text-align: center;
+        }
+        .signature-line {
+            border-top: 1px solid #000;
+            width: 50%;
+            margin: 60px auto 0;
+            padding-top: 5px;
+        }
+        .date-location {
+            text-align: right;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Declaração de {{ tipo_declaracao }}</h1>
+
+    <p>Eu, <strong>{{ declarante_nome }}</strong>, {{ declarante_nacionalidade }},
+    {{ declarante_estado_civil }}, {{ declarante_profissao }}, inscrito(a) no CPF sob o
+    nº {{ declarante_cpf }}, portador(a) do RG nº {{ declarante_rg }}, residente e
+    domiciliado(a) em {{ declarante_endereco }},</p>
+
+    <p><strong>DECLARO</strong>, para os devidos fins e efeitos legais, que:</p>
+
+    <p>{{ conteudo }}</p>
+
+    <p>A presente declaração é feita para fins de {{ finalidade }}, e é a expressão da verdade,
+    estando o(a) declarante ciente de que a falsidade desta declaração constitui crime previsto
+    no artigo 299 do Código Penal Brasileiro.</p>
+
+    <p class="date-location">{{ cidade_assinatura }}, {{ data_atual }}.</p>
+
+    <div class="signature-block">
+        <div class="signature-line">
+            {{ declarante_nome }}<br>
+            CPF: {{ declarante_cpf }}
+        </div>
+    </div>
+</body>
+</html>

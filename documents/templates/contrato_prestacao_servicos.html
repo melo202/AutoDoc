@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 2.5cm;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.8;
+            color: #000;
+            text-align: justify;
+        }
+        h1 {
+            text-align: center;
+            font-size: 16pt;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 13pt;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .signature-block {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .signature {
+            text-align: center;
+            width: 45%;
+        }
+        .signature-line {
+            border-top: 1px solid #000;
+            margin-top: 60px;
+            padding-top: 5px;
+        }
+        .witness-block {
+            margin-top: 60px;
+        }
+        .date-location {
+            text-align: right;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contrato de Prestação de Serviços</h1>
+
+    <p>Pelo presente instrumento particular, as partes abaixo qualificadas:</p>
+
+    <h2>Cláusula 1ª - Das Partes</h2>
+
+    <p><strong>CONTRATANTE:</strong> {{ contratante_nome }}, inscrito(a) no CPF sob o nº {{ contratante_cpf }},
+    portador(a) do RG nº {{ contratante_rg }}, residente e domiciliado(a) em {{ contratante_endereco }}.</p>
+
+    <p><strong>PRESTADOR(A):</strong> {{ prestador_nome }}, inscrito(a) no CPF/CNPJ sob o nº {{ prestador_cpf }},
+    portador(a) do RG nº {{ prestador_rg }}, com endereço em {{ prestador_endereco }}.</p>
+
+    <h2>Cláusula 2ª - Do Objeto</h2>
+
+    <p>O presente contrato tem como objeto a prestação dos seguintes serviços: {{ objeto }}.</p>
+
+    <h2>Cláusula 3ª - Do Valor e Forma de Pagamento</h2>
+
+    <p>Pela prestação dos serviços descritos na Cláusula 2ª, o CONTRATANTE pagará ao PRESTADOR o valor total de
+    {{ valor }}, a ser pago da seguinte forma: {{ forma_pagamento }}.</p>
+
+    <h2>Cláusula 4ª - Do Prazo</h2>
+
+    <p>O presente contrato terá vigência de {{ prazo }}, contados a partir da data de sua assinatura,
+    podendo ser prorrogado mediante acordo por escrito entre as partes.</p>
+
+    <h2>Cláusula 5ª - Das Obrigações do Prestador</h2>
+
+    <p>O PRESTADOR se obriga a:</p>
+    <p>a) Executar os serviços com zelo, diligência e boa técnica;</p>
+    <p>b) Cumprir os prazos estabelecidos;</p>
+    <p>c) Manter sigilo sobre informações confidenciais do CONTRATANTE.</p>
+
+    <h2>Cláusula 6ª - Das Obrigações do Contratante</h2>
+
+    <p>O CONTRATANTE se obriga a:</p>
+    <p>a) Efetuar os pagamentos nas datas acordadas;</p>
+    <p>b) Fornecer as informações necessárias para a execução dos serviços;</p>
+    <p>c) Colaborar para o bom andamento dos serviços.</p>
+
+    <h2>Cláusula 7ª - Da Rescisão</h2>
+
+    <p>O presente contrato poderá ser rescindido por qualquer das partes, mediante notificação por escrito
+    com antecedência mínima de 30 (trinta) dias, sem prejuízo das obrigações já assumidas.</p>
+
+    <h2>Cláusula 8ª - Do Foro</h2>
+
+    <p>As partes elegem o foro da comarca de {{ cidade_assinatura }} para dirimir quaisquer dúvidas
+    oriundas do presente contrato.</p>
+
+    <p class="date-location">{{ cidade_assinatura }}, {{ data_atual }}.</p>
+
+    <div class="signature-block">
+        <div class="signature">
+            <div class="signature-line">
+                {{ contratante_nome }}<br>
+                <small>CONTRATANTE</small>
+            </div>
+        </div>
+        <div class="signature">
+            <div class="signature-line">
+                {{ prestador_nome }}<br>
+                <small>PRESTADOR(A)</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="witness-block">
+        <p><strong>Testemunhas:</strong></p>
+        <div class="signature-block">
+            <div class="signature">
+                <div class="signature-line">
+                    Nome:<br>CPF:
+                </div>
+            </div>
+            <div class="signature">
+                <div class="signature-line">
+                    Nome:<br>CPF:
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
