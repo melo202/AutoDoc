@@ -16,15 +16,13 @@ OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
 TEMPLATES_DIR = os.path.join(os.path.dirname(__file__), "documents", "templates")
 
 DOCUMENT_TYPES = {
-    "1": "contrato_prestacao_servicos",
-    "2": "procuracao",
-    "3": "declaracao",
-    "4": "contrato_locacao",
+    "1": "procuracao_contrato",
+    "2": "declaracao",
+    "3": "contrato_locacao",
 }
 
 DOCUMENT_LABELS = {
-    "contrato_prestacao_servicos": "Contrato de Prestação de Serviços",
-    "procuracao": "Procuração",
+    "procuracao_contrato": "Procuração + Contrato Advocatício",
     "declaracao": "Declaração",
     "contrato_locacao": "Contrato de Locação",
 }
